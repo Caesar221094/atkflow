@@ -1,0 +1,19 @@
+/vendor/
+/node_modules/
+/public/storage/
+/storage/*.key
+/.env
+/.env.*
+/.idea/
+/.vscode/
+/.phpunit.result.cache
+.phpunit.result.cache
+composer.lock
+npm-debug.log
+yarn-error.log
+/storage/logs/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+# Laravel Sail
+/docker-compose*.yml
