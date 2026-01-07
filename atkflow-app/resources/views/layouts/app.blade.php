@@ -139,10 +139,21 @@
                             <li class="nav-item d-none d-md-block me-3 text-muted small">
                                 {{ now()->format('d M Y') }}
                             </li>
-                            <li class="nav-item">
-                                <span class="avatar avatar-online">
+                            <li class="nav-item me-3 d-none d-md-inline-flex align-items-center text-muted small">
+                                @auth
+                                    {{ Auth::user()->name ?? 'User' }}
+                                @endauth
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <span class="avatar avatar-online me-2">
                                     <span class="avatar-initial rounded-circle bg-primary text-white">A</span>
                                 </span>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                        Logout
+                                    </button>
+                                </form>
                             </li>
                         </ul>
                     </div>
